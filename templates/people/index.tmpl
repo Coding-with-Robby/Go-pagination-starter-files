@@ -1,0 +1,31 @@
+{{template "top" .}}
+
+<div class="people">
+  <div class="width">
+    <h1>People</h1>
+
+    <div class="people-table">
+      <div class="person-row head">
+        <div class="person-row-id">ID</div>
+        <div class="person-row-first">First Name</div>
+        <div class="person-row-last">Last Name</div>
+      </div>
+
+      {{ range.people }}
+      <div class="person-row">
+        <div class="person-row-id">
+          {{ .ID }}
+        </div>
+        <div class="person-row-first">
+          {{ .FirstName }}
+        </div>
+        <div class="person-row-last">
+          {{ .LastName }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+{{template "bottom" .}}
